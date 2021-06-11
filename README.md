@@ -1,22 +1,23 @@
 # Pierre's Sweet and Savory Treats
 
-#### _This is the Dr. Sillystringz's Factory Project created by John Edmondson_
+## _Parks API created for the Building an API Project._
 
-### Week 13 Project for the March 2021 Co-hort session: Authentication with Identity
+### Week 13 Project for the March 2021 Co-hort session: Building an API
 
 #### By _**John Edmondson**_
 
 ## Technologies Used
 
+- git
+- XML
 - C#
-- .NET 5 SDKgit
-- HTML
-- CSS
-- Bootstrap
+- .NET 5 SDK
+-
+- Entity Framework
 
 ## Description
 
-_This project is created to be an app written in C# to list all of ._
+_This project is created to be a National Park and State park API written in C# to provide a list of each state park and national park as well as additional information for each._
 
 ## Setup and Use
 
@@ -26,26 +27,42 @@ _This project is created to be an app written in C# to list all of ._
 - A text editor like [VS Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/)
 - A command line interface like Terminal or GitBash to run and interact with the console app.
 
+---
+
 ### Installation
 
-1. Clone the repository: `$ git clone https://github.com/basicjohn/PierresTreats.Solution.git`
-2. Navigate to the `PierresTreats.Solution/` directory on your computer
+1. Clone the repository: `$ git clone https://github.com/basicjohn/ParksApi.Solution.git`
+2. Navigate to the `ParksApi.Solution/` directory on your computer
 3. Open with your preferred text editor to view the code base
-4. To run the console app:
-   - Navigate to `PierresTreats.Solution/PierresTreats` in your command line
+4. To run Parks API:
+   - Navigate to `ParksApi.Solution/ParksApi.Solution` in your command line
    - Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
    - Run the commmand `dotnet build` to build the project and its dependencies into a set of binaries
    - Finally, run the command `dotnet run` to run the project!
    - Note: `dotnet run` also restores and builds the project, so you can use this single command to start the console app
 
-### Database Creation Instructions
+---
+
+### Using swagger
+
+---
+
+### Using the Parks API through Postmans
+
+_There are several ways you can intereact with the Park API using GET requests._
+
+```
+GET http://localhost:5000/api/parks?parkType=state
+```
+
+<!-- ### Database Creation Instructions
 
 1. Open MySql WorkBench application
 2. On the Administration tab click 'Data Import/Restore' menu item
 3. Select radio button for 'Import from Self-Contained File'
 4. Click the two dots to select the export file title john_edmondson.sql dump file from this project root directory
 5. Click on 'New' and name the database schema john_edmondson
-6. Click 'Start Import' button
+6. Click 'Start Import' button -->
 
 ## Known Bugs
 
