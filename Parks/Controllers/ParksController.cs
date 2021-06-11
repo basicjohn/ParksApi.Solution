@@ -21,15 +21,16 @@ namespace Parks.Controllers
     // GET: api/Parks
     [HttpGet]
     /// <summary>
-    /// Get instance(s) of a park
+    /// Method that returns instances of Parks.  It can be limited to Park types, Park Names and the year the park was established.
     /// </summary>
     /// <remarks>Get instance(s) of a park but doing a basic get request or inserting either 'National' or State'</remarks>
     /// <param name="parkType" example="National or State">Type of Park</param>
+    /// <returns></returns>
     public async Task<ActionResult<IEnumerable<Park>>> Get(string parkType, string parkName, int established)
     {
       var query = _db.Parks.AsQueryable();
 
-      if (parkType != null)
+      if (parkType == "National" || parkType == "national" || parkType == "State" || parkType == "state")
       {
         query = query.Where(entry => entry.ParkType == parkType);
       }
