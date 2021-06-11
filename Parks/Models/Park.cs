@@ -5,13 +5,21 @@ namespace Parks.Models
 {
   public class Park
   {
+    [Required]
     public int ParkId { get; set; }
+    [Required]
     public string ParkType { get; set; }
+    [Required]
     public string ParkName { get; set; }
+    [Required]
     public string ParkDescription { get; set; }
+    [Required]
     public int Established { get; set; }
+    [Required]
     public string NearestTown { get; set; }
+    [Required]
     public int VisitorCountInPreviousYear { get; set; }
+    [Required]
     public int AreaInSquareKm { get; set; }
   }
 }
