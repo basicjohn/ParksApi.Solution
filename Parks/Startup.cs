@@ -11,8 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+using Parks.Models;
 
-namespace ParksApi.Solution
+
+namespace Parks
 {
   public class Startup
   {
@@ -30,7 +33,7 @@ namespace ParksApi.Solution
       services.AddControllers();
       services.AddSwaggerGen(c =>
       {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "ParksApi.Solution", Version = "v1" });
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Parks", Version = "v1" });
       });
     }
 
@@ -41,7 +44,7 @@ namespace ParksApi.Solution
       {
         app.UseDeveloperExceptionPage();
         app.UseSwagger();
-        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ParksApi.Solution v1"));
+        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Parks v1"));
       }
 
       // app.UseHttpsRedirection();

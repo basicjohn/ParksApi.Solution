@@ -11,7 +11,7 @@ namespace Parks.Models
     public string ParkDescription { get; set; }
     public int Established { get; set; }
     public int VisitorCountInPreviousYear { get; set; }
-    public int AreaInSquareMiles { get; set; }
+    public int AreaInSquareKm { get; set; }
   }
 }
 
