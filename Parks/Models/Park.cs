@@ -14,7 +14,7 @@ namespace Parks.Models
     [Required]
     public string ParkDescription { get; set; }
     [Required]
-    public int Established { get; set; }
+    public int Established { get; set; } = 0;
     [Required]
     public string NearestTown { get; set; }
     [Required]

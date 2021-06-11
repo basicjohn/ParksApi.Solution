@@ -18,11 +18,32 @@ namespace Parks.Controllers
       _db = db;
     }
 
-    // GET api/parks
+    // GET: api/Parks
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    /// <summary>
+    /// Get instance(s) of a park
+    /// </summary>
+    /// <remarks>Get instance(s) of a park but doing a basic get request or inserting either 'National' or State'</remarks>
+    /// <param name="parkType" example="National or State">Type of Park</param>
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string parkType, string parkName, int established)
     {
-      return await _db.Parks.ToListAsync();
+      var query = _db.Parks.AsQueryable();
+
+      if (parkType != null)
+      {
+        query = query.Where(entry => entry.ParkType == parkType);
+      }
+
+      if (parkName != null)
+      {
+        query = query.Where(entry => entry.ParkName == parkName);
+      }
+      if (established != 0)
+      {
+        query = query.Where(entry => entry.Established == established);
+      }
+
+      return await query.ToListAsync();
     }
 
     // POST api/parks
