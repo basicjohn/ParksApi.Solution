@@ -2,7 +2,7 @@
 
 #### _This is the Dr. Sillystringz's Factory Project created by John Edmondson_
 
-### Week 12 Project for the March 2021 Co-hort session: Authentication with Identity
+### Week 13 Project for the March 2021 Co-hort session: Authentication with Identity
 
 #### By _**John Edmondson**_
 
