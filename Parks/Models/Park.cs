@@ -10,6 +10,7 @@ namespace Parks.Models
     public string ParkName { get; set; }
     public string ParkDescription { get; set; }
     public int Established { get; set; }
+    public string NearestTown { get; set; }
     public int VisitorCountInPreviousYear { get; set; }
     public int AreaInSquareKm { get; set; }
   }
