@@ -43,29 +43,21 @@ namespace Parks
         {
           Version = "v1",
           Title = "ParksAPI",
-          Description = "A simple example ASP.NET Core Web API",
-          TermsOfService = new Uri("https://example.com/terms"),
+          Description = "This project is created to be a National Park and State park API written in C# to provide a list of each state park and national park as well as additional information for each.",
           Contact = new OpenApiContact
           {
             Name = "John Edmondson",
             Email = string.Empty,
             Url = new Uri("https://github.com/basicjohn"),
-          },
-          License = new OpenApiLicense
-          {
-            Name = "Use under LICX",
-            Url = new Uri("https://example.com/license"),
           }
         });
-        // Set the comments path for the Swagger JSON and UI.
         var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
         c.IncludeXmlComments(xmlPath);
-      });//--end"added to implement swagger"
+      });
 
     }
 
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       if (env.IsDevelopment())
@@ -73,17 +65,13 @@ namespace Parks
         app.UseDeveloperExceptionPage();
       }
 
-      //app.UseHttpsRedirection();
 
-      // Enable middleware to serve generated Swagger as a JSON endpoint. //"added to implement swagger"
       app.UseSwagger();
 
-      // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-      // specifying the Swagger JSON endpoint.
       app.UseSwaggerUI(c =>
       {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-      }); //"added to implement swagger" --end
+      });
 
       app.UseRouting();
 

@@ -9,6 +9,7 @@ namespace Parks.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [ApiVersion("1.0")]
   public class ParksController : ControllerBase
   {
     private readonly ParksContext _db;
@@ -18,14 +19,15 @@ namespace Parks.Controllers
       _db = db;
     }
 
-    // GET: api/Parks
-    [HttpGet]
     /// <summary>
     /// Method that returns instances of Parks.  It can be limited to Park types, Park Names and the year the park was established.
     /// </summary>
     /// <remarks>Get instance(s) of a park but doing a basic get request or inserting either 'National' or State'</remarks>
-    /// <param name="parkType" example="National or State">Type of Park</param>
+    /// <param name="parkType" example="National">Type of Park (National or State)</param>
+    /// <param name="parkName" example="Yosemite">Name of Park</param>
+    /// <param name="established" example="1872">Year Established</param>
     /// <returns></returns>
+    [HttpGet]
     public async Task<ActionResult<IEnumerable<Park>>> Get(string parkType, string parkName, int established)
     {
       var query = _db.Parks.AsQueryable();
@@ -47,7 +49,7 @@ namespace Parks.Controllers
       return await query.ToListAsync();
     }
 
-    // POST api/parks
+
     [HttpPost]
     public async Task<ActionResult<Park>> Post(Park park)
     {
