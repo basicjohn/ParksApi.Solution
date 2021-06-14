@@ -8,12 +8,12 @@
 
 ## Technologies Used
 
-- git
-- XML
 - C#
-- .NET 5 SDK
--
-- Entity Framework
+- Microsoft ASP.NET Core
+- Microsoft ASP.NET Mvc Versioning
+- Swashbuckle for ASP.NET Core
+- XML
+- Git
 
 ## Description
 
@@ -34,7 +34,7 @@ _This project is created to be a National Park and State park API written in C# 
 1. Clone the repository: `$ git clone https://github.com/basicjohn/ParksApi.Solution.git`
 2. Navigate to the `ParksApi.Solution/` directory on your computer
 3. Open with your preferred text editor to view the code base
-4. To run Parks API:
+4. To run the ParksAPI:
    - Navigate to `ParksApi.Solution/ParksApi.Solution` in your command line
    - Run the command `dotnet restore` to restore the dependencies that are listed in the .csproj
    - Run the commmand `dotnet build` to build the project and its dependencies into a set of binaries
@@ -43,11 +43,11 @@ _This project is created to be a National Park and State park API written in C# 
 
 ---
 
-### Using swagger
+### Using swagger for API request information
 
----
+_Full documentation for each method provided through swagger. To get to the documentation navigation in your web browser to `https://localhost:5001/swagger/` From there you'll be able to get information on each type of request and the optioned you have within each one._
 
-### Using the Parks API through Postmans
+<!--### Using the Parks API through Postmans
 
 _There are several ways you can intereact with the Park API using GET requests._
 
@@ -63,7 +63,7 @@ Display State Parks list
 GET http://localhost:5000/api/parks?parkType=state
 ```
 
-<!-- ### Database Creation Instructions
+ ### Database Creation Instructions
 
 1. Open MySql WorkBench application
 2. On the Administration tab click 'Data Import/Restore' menu item
