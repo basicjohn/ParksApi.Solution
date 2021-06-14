@@ -44,7 +44,7 @@ _This project is created to be a National Park and State park API written in C# 
 
 ---
 
-### Using swagger for API request information
+### Using swagger for API request documentation
 
 _Full documentation for each method provided through swagger. To get to the documentation navigation in your web browser to `https://localhost:5001/swagger/` From there you'll be able to get information on each type of request and the optioned you have within each one._
 
