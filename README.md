@@ -51,6 +51,14 @@ _This project is created to be a National Park and State park API written in C# 
 
 _There are several ways you can intereact with the Park API using GET requests._
 
+Display National Parks list
+
+```
+GET http://localhost:5000/api/parks?parkType=National
+```
+
+Display State Parks list
+
 ```
 GET http://localhost:5000/api/parks?parkType=state
 ```
