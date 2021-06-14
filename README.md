@@ -11,6 +11,7 @@
 - C#
 - Microsoft ASP.NET Core
 - Microsoft ASP.NET Mvc Versioning
+- Swagger API Platform
 - Swashbuckle for ASP.NET Core
 - XML
 - Git
@@ -46,31 +47,6 @@ _This project is created to be a National Park and State park API written in C# 
 ### Using swagger for API request information
 
 _Full documentation for each method provided through swagger. To get to the documentation navigation in your web browser to `https://localhost:5001/swagger/` From there you'll be able to get information on each type of request and the optioned you have within each one._
-
-<!--### Using the Parks API through Postmans
-
-_There are several ways you can intereact with the Park API using GET requests._
-
-Display National Parks list
-
-```
-GET http://localhost:5000/api/parks?parkType=National
-```
-
-Display State Parks list
-
-```
-GET http://localhost:5000/api/parks?parkType=state
-```
-
- ### Database Creation Instructions
-
-1. Open MySql WorkBench application
-2. On the Administration tab click 'Data Import/Restore' menu item
-3. Select radio button for 'Import from Self-Contained File'
-4. Click the two dots to select the export file title john_edmondson.sql dump file from this project root directory
-5. Click on 'New' and name the database schema john_edmondson
-6. Click 'Start Import' button -->
 
 ## Known Bugs
 
