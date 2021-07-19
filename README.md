@@ -1,4 +1,4 @@
-# Pierre's Sweet and Savory Treats
+# Parks API
 
 ## _Parks API created for the Building an API Project._
 
